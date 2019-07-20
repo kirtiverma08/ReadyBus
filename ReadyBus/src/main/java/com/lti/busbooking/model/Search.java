@@ -12,15 +12,19 @@ import javax.persistence.Table;
 @Table(name="busdata")
 public class Search
 {
-@Id
+
 @GeneratedValue(strategy=GenerationType.AUTO,generator="custid_generator")
 @SequenceGenerator(name="custid_generator",sequenceName="bus100",allocationSize=1)
+@Id
 @Column(name="bus_id",updatable=false,nullable=false)
 private int bus_id;
+
 @Column(name="source")
 private String source;
+
 @Column(name="destination")
 private String destination;
+
 @Column(name="travel_date")
 private String travel_date;
 @Column(name="return_date")
@@ -31,6 +35,7 @@ private String arrival_time;
 private String depart_time;
 @Column(name="fare")
 private int fare;
+
 @Override
 public String toString() {
  return "Search [bus_id=" + bus_id + ", source=" + source + ", destination=" + destination + ", travel_date="

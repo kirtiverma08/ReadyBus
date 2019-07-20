@@ -6,7 +6,6 @@ import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -33,21 +32,70 @@ public class SearchDAOImpl implements SearchDAO
 	}
 
 
-	public List<Search> getBus() {
-		 
-		 Search fs = new Search();
+	public List<Search> getBus(Search s) {
 		Session session=null;
+		 session=sessionFactory.getCurrentSession();
+	       //CriteriaBuilder is for defining condition,here it is optional
+	       CriteriaBuilder cb=session.getCriteriaBuilder();
+	       CriteriaQuery<Search> cq=cb.createQuery(Search.class);
+	       
+	       //Here the SQL query is executed
+	       Root<Search> root=cq.from(Search.class);
+	       
+	       System.out.println("Form"+s.getSource() + " "+s.getDestination());
+		   	System.out.println("Table"+root.get("source")+" "+root.get("destination") );
+	      // cq.select(root);
+		   	
+	 /*  	cq.select(root).where(cb.and(
+				cb.equal(root.get("source"), s.getSource() ),
+				cb.equal(root.get("destination"),s.getDestination())
+			));*/
+	   	
+	   	System.out.println("Form"+s.getSource() + " "+s.getDestination());
+	   	System.out.println("Table"+root.get("source")+" "+root.get("destination") );
+	       Query query=session.createQuery(cq);
+	       return query.getResultList();
+	}
+
+
+	/*public Search checkUser(Search theUser) {
+		Search usr=null;
+		Session session=null;
+		
+		try
+		{
 		session = sessionFactory.getCurrentSession();
 		CriteriaBuilder cb = session.getCriteriaBuilder();
 		CriteriaQuery<Search> cq = cb.createQuery(Search.class);
 		Root<Search> root = cq.from(Search.class);
-	cq.select(root).where(cb.and(cb.equal(root.get("source"),fs.getSource()),cb.equal(root.get("destination"),fs.getDestination())));
-			Query query = session.createQuery(cq);	
-		return query.getResultList();
-	 
+		
+		cq.select(root).where(cb.and(
+				cb.equal(root.get("source"), theUser.getSource()),
+				cb.equal(root.get("destination"),theUser.getDestination())
+			));
+		
+		Query query = session.createQuery(cq);
+		query.setMaxResults(1);
+		usr=(Search) query.getSingleResult();
+		
+		}
+		
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+		}
+		
+		finally
+		{
+			if (session != null) 
+			{}
+		}
+		
+		return usr;
 	}
-
-
+*/
+	
+	
 
 	
 

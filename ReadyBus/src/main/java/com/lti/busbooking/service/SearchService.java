@@ -6,7 +6,8 @@ import com.lti.busbooking.model.Search;
 
 public interface SearchService
 {
-public List<Search> getBus();
-public Search getBuses(int theId);
 
+public Search getBuses(int theId);
+public Search checkUser(Search theUser);
+public List<Search> getBus(Search s);
 }

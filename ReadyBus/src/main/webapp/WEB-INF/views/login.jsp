@@ -30,17 +30,15 @@
       <ul class="navbar-nav ml-auto">
      
         <li class="nav-item">
-          <a class="nav-link" href="contact.jsp">Contact Us</a>
+         <a class="nav-link" href="contact">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login.jsp">Login</a>
+           <a class="nav-link" href="loginForm">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="signup.jsp">Sign Up</a>
+           <a class="nav-link" href="signupForm">Sign Up</a>
         </li>
-       <li class="nav-item">
-          <a class="nav-link" href="admin.jsp">Admin</a>
-        </li>
+      
       </ul>
     </div>
   </div>
@@ -71,7 +69,7 @@
 					<br>
 					<input type="checkbox" name="remember_me" value="remember me">Remember Me<br>
 					<br>
-					<a href = "/forgotpassword.jsp">Forgot Password</a><br>
+					<a href = "forgotpassword">Forgot Password</a><br> 
 					<br>
 			
 <input type="submit"  value="Submit"><div style="color: red">${error}</div>

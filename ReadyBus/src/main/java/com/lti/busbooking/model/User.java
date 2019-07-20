@@ -7,14 +7,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="signup")
 public class User {
 	
 	@Column(name="fname")
+	@NotNull
 	private String firstname;
-	
+	@NotNull
 	@Column(name="lname")
 	private String lastname;
 	

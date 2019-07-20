@@ -32,8 +32,15 @@ public class UserController {
 	@PostMapping("/saveUser")
 	public String saveUser(@ModelAttribute("user") User theUser) {
 		userService.saveUser(theUser);
-		return "redirect:/user/home";
+		
+		return "home";
 	}
+	
+	@RequestMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+	
 	
 	//working
 		@GetMapping("/loginForm")
@@ -59,5 +66,40 @@ public class UserController {
 			return model;
 		}
 		
+		 @GetMapping("/terms")
+		 public String showterms(Model theModel) {
+		  User theUser = new User();
+		  theModel.addAttribute("user", theUser);
+		  return "terms";
+		 }
+		 
+
+		 @GetMapping("/privacy")
+		 public String showprivacy(Model theModel) {
+		  User theUser = new User();
+		  theModel.addAttribute("user", theUser);
+		  return "privacy";
+		 }
+		 
+		 @GetMapping("/forgotpassword")
+		 public String showpass(Model theModel) {
+		  User theUser = new User();
+		  theModel.addAttribute("user", theUser);
+		  return "forgotpassword";
+		 }
+		 
+		 @GetMapping("/resetpassword")
+		 public String showre(Model theModel) {
+		  User theUser = new User();
+		  theModel.addAttribute("user", theUser);
+		  return "resetpassword";
+		 }
+
+		 @GetMapping("/FAQ")
+		 public String showfaq(Model theModel) {
+		  User theUser = new User();
+		  theModel.addAttribute("user", theUser);
+		  return "FAQ";
+		 }
 		
 }

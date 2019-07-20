@@ -40,7 +40,7 @@
           <a class="nav-link" href="user/signupForm">Sign Up</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="admin/adminLoginForm">admin</a>
+          <a class="nav-link" href="admin/aLF">admin</a>
         </li>
       </ul>
     </div>
@@ -57,7 +57,7 @@
 
 
 <div id = "form" align = "center" method = "post" >
-<form action = "search/list" modelAttribute="search">
+<form action = "search/list" modelAttribute="bussearch">
 		
 			<table  cellpadding= "15px" width = 70% >
 
@@ -88,6 +88,20 @@
 
 
 </div>
-
+<nav class="navbar fixed-bottom navbar-expand-sm bg-light navbar-text-dark">
+   
+      <ul class="navbar-nav ml-auto">
+     
+        <li class="nav-item">
+          <a class="nav-link" href="user/terms">Terms & Conditions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="user/privacy">Privacy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="user/FAQ">FAQs</a>
+        </li>
+      </ul>
+</nav>
 </body>
 </html>

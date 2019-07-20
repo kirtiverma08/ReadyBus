@@ -27,9 +27,15 @@ public Search getBuses(int theId)
 }
 
 @Transactional
-public List<Search> getBus() {
+public List<Search> getBus(Search s) {
 	// TODO Auto-generated method stub
-	 return searchDAO.getBus();
+	 return searchDAO.getBus(s);
 }
+@Transactional
+public Search checkUser(Search theUser)
+{
+		return SearchDAO.checkUser(theUser);
+		
+	}
 
 }

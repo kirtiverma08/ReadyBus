@@ -30,16 +30,13 @@
       <ul class="navbar-nav ml-auto">
      
         <li class="nav-item">
-          <a class="nav-link" href="contactus">Contact Us</a>
+         <a class="nav-link" href="contact">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
+          <a class="nav-link" href="loginForm">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="signup">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="admin">Admin</a>
+        <a class="nav-link" href="signupForm">Sign Up</a>
         </li>
       </ul>
 </nav>
@@ -66,6 +63,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
+                    
                         <form:form name="reg" action="saveUser" modelAttribute="user" method="post">
                          
                             <div class="form-group">

@@ -20,14 +20,13 @@
 					</properties>
   <dependencies>
      
-    <!-- Spring MVC Dependency -->
+   
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- Spring ORM -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
@@ -46,35 +45,35 @@
     <version>5.1.4.RELEASE</version>
 </dependency>
 
-		<!-- Hibernate Core -->
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.0.Final</version>
 		</dependency>
 
-		<!-- Hibernate-C3P0 Integration -->
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-c3p0</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- c3p0 -->
+		
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>${c3p0.version}</version>
 		</dependency>
 
-		<!-- Hibernate Validator -->
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>
 			<version>${hibernate.validator}</version>
 		</dependency>
 
-		<!-- JSTL Dependency -->
+		
 		<dependency>
 			<groupId>javax.servlet.jsp.jstl</groupId>
 			<artifactId>javax.servlet.jsp.jstl-api</artifactId>
@@ -87,7 +86,7 @@
 			<version>${tld.version}</version>
 		</dependency>
 
-		<!-- Servlet Dependency -->
+		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -95,7 +94,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- JSP Dependency -->
+		
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>javax.servlet.jsp-api</artifactId>
