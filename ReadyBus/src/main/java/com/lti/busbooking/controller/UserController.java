@@ -20,6 +20,13 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	 @GetMapping("/home")
+	 public String showhome(Model theModel) {
+	  User theUser = new User();
+	  theModel.addAttribute("user", theUser);
+	  return "home";
+	 }
+	
 	@GetMapping("/signupForm")
 	public ModelAndView showFormForAdd()
 	{	ModelAndView mv=new ModelAndView ("signup");

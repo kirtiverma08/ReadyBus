@@ -28,7 +28,9 @@
   </a>
 
       <ul class="navbar-nav ml-auto">
-     
+        <li class="nav-item">
+         <a class="nav-link" href="home">Home</a>
+        </li>
         <li class="nav-item">
          <a class="nav-link" href="contact">Contact Us</a>
         </li>
@@ -64,7 +66,7 @@
                 <div class="card">
                     <div class="card-body">
                     
-                        <form:form name="reg" action="saveUser" modelAttribute="user" method="post">
+                        <form:form name="reg" action="saveuser" modelAttribute="user" method="post">
                          
                             <div class="form-group">
                             <label for="firstname">First Name: </label>
@@ -94,27 +96,30 @@
                              <form:input path="contact" placeholder="Your contact number.." />
                                 
                                 </div>
-                                
+                               
+                                <label for="gender">Gender:</label>
+                                <form:radiobutton  path="gender" value="male"/>Male
+                                <form:radiobutton path="gender" value="female"/> Female
+ 								<form:radiobutton  path="gender" value="other"/> Other 
+ 								 
                                 
                              <div class="form-group">
                             <label for="dob">DOB:</label>
                              <form:input path="dob" placeholder="DD/MM/YYYY" />
                                </div>
                             
-                             <label for="gender">Gender:</label>
-                                <form:radiobutton  path="gender" value="male"/>Male
-                                <form:radiobutton path="gender" value="female"/> Female
- 								<form:radiobutton  path="gender" value="other"/> Other 
- 								
+                            
                             
                             <br>
                             <br>                       
                          
-                      <form:button class="btn btn-success" >Register</form:button>
-                       <form:button class="btn btn-danger" >Cancel</form:button>
+                      <form:button class="btn btn-success" align="center" >Register</form:button>
+                       
                             
                             
                         </form:form>
+                        
+                       
                     </div>
                 </div>
             </div>
